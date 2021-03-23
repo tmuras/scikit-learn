@@ -909,7 +909,7 @@ def export_text(decision_tree, *, feature_names=None, max_depth=10,
     else:
         value_fmt = "{}{} value: {}\n"
 
-    if feature_names:
+    if feature_names is not None:
         feature_names_ = [feature_names[i] if i != _tree.TREE_UNDEFINED
                           else None for i in tree_.feature]
     else:
